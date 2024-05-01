@@ -476,7 +476,7 @@
       <root id="archive" name="fishModLoader.jar">
         <element id="extracted-dir" path="$PROJECT_DIR$/libs/access-widener/access-widener-2.1.0.jar" path-in-jar="/" />
         <element id="extracted-dir" path="$PROJECT_DIR$/libs/access-widener/access-widener-2.1.0-sources.jar" path-in-jar="/" />
-        <element id="module-output" name="FishModLoader" />
+        <element id="module-output" name="LoliModLoader" />
         <element id="extracted-dir" path="$PROJECT_DIR$/libs/guava/failureaccess-1.0.2.jar" path-in-jar="/" />
         <element id="extracted-dir" path="$PROJECT_DIR$/libs/tinyremapper/tiny-remapper-0.10.1+local.jar" path-in-jar="/" />
         <element id="extracted-dir" path="$PROJECT_DIR$/libs/asm-9.6.jar" path-in-jar="/" />
@@ -780,7 +780,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FishModLoader.iml" filepath="$PROJECT_DIR$/FishModLoader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LoliModLoader.iml" filepath="$PROJECT_DIR$/LoliModLoader.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
