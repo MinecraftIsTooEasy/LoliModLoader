@@ -24,6 +24,7 @@
  */
 package org.spongepowered.tools.obfuscation;
 
+import ink.huix.mixinextras.When;
 import org.spongepowered.asm.mixin.Implements;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
@@ -58,6 +59,11 @@ public class MixinObfuscationProcessorTargets extends MixinObfuscationProcessor 
      */
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
+        for (Element elem : roundEnv.getElementsAnnotatedWith(When.class)) {
+            if (elem != null) {
+                return true;
+            }
+        }
         if (roundEnv.processingOver()) {
             this.postProcess(roundEnv);
             return true;

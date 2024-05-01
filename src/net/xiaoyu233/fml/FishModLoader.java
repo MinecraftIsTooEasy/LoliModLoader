@@ -19,11 +19,12 @@ import net.fabricmc.loader.impl.util.ExceptionUtil;
 import net.fabricmc.loader.impl.util.SystemProperties;
 import net.fabricmc.loader.impl.util.log.Log;
 import net.fabricmc.loader.impl.util.log.LogCategory;
+import net.minecraft.Minecraft;
 import net.xiaoyu233.fml.config.ConfigRegistry;
 import net.xiaoyu233.fml.config.Configs;
 import net.xiaoyu233.fml.config.InjectionConfig;
 import net.xiaoyu233.fml.relaunch.Launch;
-import net.xiaoyu233.fml.reload.transform.MinecraftServerTrans;
+import net.xiaoyu233.fml.reload.mixins.MinecraftServerTrans;
 import net.xiaoyu233.fml.util.Constants;
 import net.xiaoyu233.fml.util.RemoteModInfo;
 import net.xiaoyu233.fml.util.UrlUtil;
@@ -428,7 +429,8 @@ public class FishModLoader{
                               .setName(MOD_ID)
                               .accesswidener("fishmodloader.accesswidener")
                               .build()),
-              new ModCandidate.BuiltinMod(Collections.singletonList(gameJarPath), new BuiltinModMetadata.Builder("mite", "1.6.4").setEnvironment(ModEnvironment.UNIVERSAL)
+              new ModCandidate.BuiltinMod(Collections.singletonList(gameJarPath), new BuiltinModMetadata.Builder("mite", "1.6.4" + "+R" + Minecraft.MITE_release_number)
+                      .setEnvironment(ModEnvironment.UNIVERSAL)
                       .setName("1.6.4-MITE")
                       .build()));
    }
